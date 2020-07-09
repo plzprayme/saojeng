@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView textView = findViewById(R.id.textView);
-        textView.setText("I`m hyunwoo");
+        //textView.setText("I`m hyunwoo");
+        textView.setText("충돌이 발생 하겠죠?");
     }
 }
