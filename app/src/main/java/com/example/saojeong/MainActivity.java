@@ -16,5 +16,6 @@ public class MainActivity extends AppCompatActivity {
         textView.setText("충돌이 나겠죠??");
         //textView.setText("I`m HyunWoo");  //confilct 제거
         //rebase test입니다.
+        //git log test입니다.
     }
 }
