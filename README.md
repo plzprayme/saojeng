@@ -1,16 +1,10 @@
-# 📚 SAOJENG - 사러가자 오정동 농수산물
-## Android Application for Dajeon Citizen
+# 🛹 사오정 - 사러가자 오정동 농수산물
+## Android Application for Daejeon Citizen
 ![Version - 1.0.0](https://img.shields.io/badge/Version-1.0.0-orange.svg)
 
 ## Authors
 - 🍙 [prayme - Back-End Developer](dbfpzk142@gmail.com)
 
-### Libraries and Packages
-
-| Library       | Description  |
-|:-------------:|:-----|
-| ...  | ... |
-| ...  | ... |
 
 ## Setup
 ### Prerequisites ###
