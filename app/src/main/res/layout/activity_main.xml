@@ -57,6 +57,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="리싸이클" />
+
+        <Button
+            android:onClick="clickHandler"
+            android:id="@+id/btn_rc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="리싸이클2" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
