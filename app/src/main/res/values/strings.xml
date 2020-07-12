@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">saojeong</string>
+    <string name="title_home">Home</string>
+    <string name="title_bot">bot</string>
+    <string name="title_empty">empty</string>
+    <string name="title_community">community</string>
+
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string-array name = "Score">
+        <item>"Android"</item>
+        <item>"Java"</item>
+        <item>"C/C++"</item>
+    </string-array>
 </resources>

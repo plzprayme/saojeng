@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_bot"
+        android:title="@string/title_bot" />
+
+    <item
+        android:id="@+id/navigation_money"
+        android:title="@string/title_empty" />
+    <item
+        android:id="@+id/navigation_community"
+        android:title="@string/title_community" />
+
+</menu>
