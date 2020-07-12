@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
@@ -50,6 +49,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="한밭수산" />
+
+        <Button
+            android:onClick="clickHandler"
+            android:id="@+id/btn_rc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="리싸이클" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

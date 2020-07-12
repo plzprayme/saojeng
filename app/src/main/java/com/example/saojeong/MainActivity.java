@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -61,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_ss:
                 transaction.replace(R.id.frameLayout, seaFoodFragment)
                         .commitAllowingStateLoss();
+                break;
+            case R.id.btn_rc:
+                startActivity(new Intent(this, UserListActivity.class));
                 break;
         }
     }
