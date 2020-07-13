@@ -3,6 +3,7 @@ package com.example.saojeong;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import com.example.saojeong.fragment.ChungGwaFragment;
 import com.example.saojeong.fragment.ExampleFragment;
 import com.example.saojeong.fragment.NHFragment;
+import com.example.saojeong.fragment.RecyclerFragment;
 import com.example.saojeong.fragment.SeaFoodFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private NHFragment nhFragment;
     private ChungGwaFragment chungGwaFragment;
     private SeaFoodFragment seaFoodFragment;
+    private RecyclerFragment recyclerFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         nhFragment = new NHFragment();
         chungGwaFragment = new ChungGwaFragment();
         seaFoodFragment = new SeaFoodFragment();
+        recyclerFragment = new RecyclerFragment();
 
         transaction = fragmentManager.beginTransaction();
 
@@ -65,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_rc:
                 startActivity(new Intent(this, UserListActivity.class));
+                break;
+            case R.id.btn_rc2:
+                transaction.replace(R.id.frameLayout, recyclerFragment)
+                        .commitAllowingStateLoss();
                 break;
         }
     }
