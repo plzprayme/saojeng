@@ -74,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
                 transaction.replace(R.id.frameLayout, recyclerFragment)
                         .commitAllowingStateLoss();
                 break;
+
+            case R.id.btn_pager:
+                startActivity(new Intent(this, ViewPagerActivity.class));
+                break;
         }
     }
 
