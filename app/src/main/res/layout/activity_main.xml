@@ -65,6 +65,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="프레그먼트_리싸이클" />
+
+        <Button
+            android:onClick="clickHandler"
+            android:id="@+id/btn_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ViewPager" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
