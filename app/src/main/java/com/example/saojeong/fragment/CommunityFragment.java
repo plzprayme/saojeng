@@ -8,46 +8,57 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.saojeong.MainActivity;
 import com.example.saojeong.R;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
+
 public class CommunityFragment extends Fragment {
 
 
-    PagerAdapter adapter;
-    ViewPager viewPager;
+    PagerAdapter1 adapter;
+    ViewPager2 viewPager;
     TabLayout tabLayout;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = (ViewGroup) inflater.inflate(R.layout.community_fragment, container, false);
-        tabLayout = view.findViewById(R.id.tablayout);
 
 
-        adapter=new PagerAdapter1(getChildFragmentManager() , tabLayout.getTabCount());
+        adapter=new PagerAdapter1(getActivity());
         viewPager=view.findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.addTab((tabLayout.newTab().setText("그냥글")));
-        tabLayout.addTab((tabLayout.newTab().setText("인기글")));
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
+
+        tabLayout = view.findViewById(R.id.tablayout);
+
+        //Tab사용시 필요
+        TabLayoutMediator tabLayoutMediator=new TabLayoutMediator(tabLayout, viewPager, new TabLayoutMediator.OnConfigureTabCallback(){
 
             @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) { //탭 목록
+                switch(position){
+                    case 0:{
+                        tab.setText("0");
+                        break;
+                    }
+                    case 1:{
+                        tab.setText("1");
+                        break;
+                    }
+                    case 2:{
+                        tab.setText("2");
+                        break;
+                    }
+                }
 
-            }
 
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
 
             }
         });
+        tabLayoutMediator.attach(); //붙임
+
         return view;
     }
 

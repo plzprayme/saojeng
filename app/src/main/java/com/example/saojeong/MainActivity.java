@@ -11,19 +11,14 @@ import com.example.saojeong.fragment.ChungGwaFragment;
 import com.example.saojeong.fragment.CommunityFragment;
 import com.example.saojeong.fragment.HomeFragment;
 
-import androidx.annotation.NonNull;
-
 import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.view.MenuItem;
 import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 //bottom_nav_menu android:icon="" 추가필요
-
+//CommunityFragment에서 탭+ViewPager2사용
 public class MainActivity extends AppCompatActivity {
-
     public Button button;
     int i=0;
     @Override
@@ -32,10 +27,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         FragmentManager fragmentManager = getSupportFragmentManager();
         BottomNavigationView bottomNavigationView = findViewById(R.id.navBottm_view);
+
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frame_layout, new ChungGwaFragment()).commitAllowingStateLoss();
 
-        // bottomNavigationView의 아이템이 선택될 때 호출될 리스너 등록
+        // bottomNavigationView의 아이템이 선택될 때 호출될 리스너 등록 (아래 네비게이션바임)
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             FragmentTransaction transaction1 = fragmentManager.beginTransaction();
             switch (item.getItemId()) {
@@ -56,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
             }
-
             return true;
         });
 

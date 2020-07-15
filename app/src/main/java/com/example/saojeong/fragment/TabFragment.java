@@ -22,9 +22,11 @@ public class TabFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.text_fragment1, container, false);
-        TextView text=view.findViewById(R.id.textView1111);
-        text.setText(num);
+        View view;
+        if(num==1)
+            view=inflater.inflate(R.layout.text_fragment1, container, false); //1이면 이탭
+        else
+            view=inflater.inflate(R.layout.text_fragment2, container, false); //0,2,외 이탭
         return view;
     }
 }
