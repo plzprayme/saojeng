@@ -78,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_pager:
                 startActivity(new Intent(this, ViewPagerActivity.class));
                 break;
+
+            case R.id.btn_fg:
+                startActivity(new Intent(this, FragmentActivity.class));
+                break;
         }
     }
 
