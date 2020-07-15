@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".FragmentActivity">
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -28,59 +28,27 @@
 
         <Button
             android:onClick="clickHandler"
-            android:id="@+id/btn_nh"
+            android:id="@+id/btn_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="대전농협" />
+            android:text="홈" />
 
         <Button
             android:onClick="clickHandler"
-            android:id="@+id/btn_cg"
+            android:id="@+id/btn_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="대전청과" />
+            android:text="가격" />
 
         <Button
             android:onClick="clickHandler"
-            android:id="@+id/btn_ss"
+            android:id="@+id/btn_my"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="한밭수산" />
-
-        <Button
-            android:onClick="clickHandler"
-            android:id="@+id/btn_rc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="리싸이클" />
-
-        <Button
-            android:onClick="clickHandler"
-            android:id="@+id/btn_rc2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="프레그먼트_리싸이클" />
-
-        <Button
-            android:onClick="clickHandler"
-            android:id="@+id/btn_pager"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="ViewPager" />
-
-        <Button
-            android:onClick="clickHandler"
-            android:id="@+id/btn_fg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="fragment" />
+            android:text="my" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

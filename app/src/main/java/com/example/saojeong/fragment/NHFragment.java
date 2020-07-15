@@ -10,6 +10,11 @@ import androidx.fragment.app.Fragment;
 import com.example.saojeong.R;
 
 public class NHFragment extends Fragment {
+
+    public static NHFragment newInstance() {
+        return new NHFragment();
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,

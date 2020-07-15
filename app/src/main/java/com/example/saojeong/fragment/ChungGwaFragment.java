@@ -10,6 +10,11 @@ import androidx.fragment.app.Fragment;
 import com.example.saojeong.R;
 
 public class ChungGwaFragment extends Fragment {
+
+    public static ChungGwaFragment newInstance() {
+        return new ChungGwaFragment();
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,

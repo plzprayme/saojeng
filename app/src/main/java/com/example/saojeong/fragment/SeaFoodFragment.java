@@ -10,6 +10,11 @@ import androidx.fragment.app.Fragment;
 import com.example.saojeong.R;
 
 public class SeaFoodFragment extends Fragment {
+
+    public static SeaFoodFragment newInstance() {
+        return new SeaFoodFragment();
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
